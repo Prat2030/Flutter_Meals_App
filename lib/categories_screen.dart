@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, unused_import
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, unused_import, invalid_required_positional_param
 
 import 'package:flutter/material.dart';
 
@@ -6,7 +6,8 @@ import './models/category.dart';
 import './category_item.dart';
 import './dummy_data.dart';
 
-class MealCategories extends StatelessWidget {
+class CategoriesScreen extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,6 +20,7 @@ class MealCategories extends StatelessWidget {
             .map((catData) => CategoryItem(
                   // catData.title,
                   // catData.color,
+                  id: catData.id,
                   title: catData.title, // converted to named argument
                   color: catData.color,
                 ))
