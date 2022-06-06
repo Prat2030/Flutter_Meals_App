@@ -19,7 +19,6 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
   List<Meal>? displayedMeals;
   bool _loadedInitData = false;
 
-
   @override
   void didChangeDependencies() {
     if (!_loadedInitData) {
@@ -56,7 +55,6 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
             duration: displayedMeals![index].duration,
             affordability: displayedMeals![index].affordability,
             complexity: displayedMeals![index].complexity,
-            removeItem: _removeMeal,
           );
         },
         itemCount: displayedMeals!.length,
